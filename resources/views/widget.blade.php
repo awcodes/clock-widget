@@ -1,10 +1,8 @@
 <x-filament-widgets::widget>
     <x-filament::card>
-        <x-slot name="header">
-            <x-filament::card.heading>
-                {{ __('clock-widget::title') }}
-            </x-filament::card.heading>
-        </x-slot>
+        <h2 class="font-bold text-xl mb-4 text-center">
+            {{ __('clock-widget::clock-widget.title') }}
+        </h2>
 
         <div
             x-ignore
@@ -13,7 +11,7 @@
             x-data="clockWidget()"
             class="text-center"
         >
-            <p>{{ __('clock-widget::description') }}</p>
+            <p>{{ __('clock-widget::clock-widget.description') }}</p>
             <p class="text-xl" x-text="time"></p>
         </div>
     </x-filament::card>
