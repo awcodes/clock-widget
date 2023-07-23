@@ -25,8 +25,8 @@ class ClockWidgetServiceProvider extends PackageServiceProvider
 
         // Asset Registration
         FilamentAsset::register(
-            assets:[
-                 AlpineComponent::make('clock-widget', __DIR__ . '/../resources/dist/clock-widget.js'),
+            assets: [
+                AlpineComponent::make('clock-widget', __DIR__ . '/../resources/dist/clock-widget.js'),
             ],
             package: 'awcodes/clock-widget'
         );
