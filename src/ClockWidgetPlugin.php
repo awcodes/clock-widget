@@ -4,6 +4,9 @@ namespace Awcodes\ClockWidget;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use Filament\Support\Assets\AlpineComponent;
+use Filament\Support\Facades\FilamentAsset;
+use Livewire\Livewire;
 
 class ClockWidgetPlugin implements Plugin
 {
@@ -19,7 +22,14 @@ class ClockWidgetPlugin implements Plugin
 
     public function boot(Panel $panel): void
     {
-        //
+        Livewire::component('clock-widget', ClockWidget::class);
+
+        FilamentAsset::register(
+            assets:[
+                 AlpineComponent::make('clock-widget', __DIR__ . '/../resources/dist/clock-widget.js'),
+            ],
+            package: 'awcodes/clock-widget'
+        );
     }
 
     public static function make(): static
