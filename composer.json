@@ -3,6 +3,7 @@
     "description": "A clock widget to demo building a Panel Provider plugin for Filament",
     "keywords": [
         "awcodes",
+        "filament",
         "laravel",
         "clock-widget"
     ],
@@ -36,8 +37,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Awcodes\\ClockWidget\\": "src/",
-            "Awcodes\\ClockWidget\\Database\\Factories\\": "database/factories/"
+            "Awcodes\\ClockWidget\\": "src/"
         }
     },
     "autoload-dev": {
@@ -62,10 +62,7 @@
         "laravel": {
             "providers": [
                 "Awcodes\\ClockWidget\\ClockWidgetServiceProvider"
-            ],
-            "aliases": {
-                "ClockWidget": "Awcodes\\ClockWidget\\Facades\\ClockWidget"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
